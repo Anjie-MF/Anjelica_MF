@@ -1,0 +1,77 @@
+/* =======================================================
+GLOBAL STYLES
+======================================================= */
+:root {
+
+    /* Style Guide-Color */
+    --primary-background: ;
+    --secondary-background: ;
+    --accent-background: ;
+    --primary-text: black;
+    --secondary-text: black;
+    --card-background-color: ;
+    --card-border: ;
+    --nav-bar-background: ;
+    --button-background: ;
+    --button-border: ;
+    --footer-background: ;
+
+    /* Font Families */
+    --heading-font: "Playfair Display", serif;
+    --body-text: "Lora", serif;
+
+    /* Font Sizes */
+    --h1-heading-size: 3rem;
+    --h2-heading-size: 1.75rem;
+    --h3-heading-size: 1.25em;
+    --body-standard-size: 1.15rem;
+    --body-xs-font-size: 0.75rem;
+    --button-text-size: 1.25rem;
+
+    /* Line Heights */
+    --h1-line-height: 2.813rem;
+    --h2-line-height: 2.25rem;
+    --h3-line-height: 1.625rem;
+    --body-standard-line-height: 1.625rem;
+    --body-xs-line-height: 1.25rem;
+
+    /* Font Weights */
+    --playfair-display-sc-regular: 400;
+    --playfair-display-sc-bold: 700;
+    --playfair-display-sc-black: 900;
+    --playfair-display-sc-regular-italic: 400;
+    --playfair-display-sc-bold-italic: 700;
+    --playfair-display-sc-black-italic: 900;
+    --lora-regular: 400;
+    --lora-medium: 500;
+    --lora-semibold: 600;
+    --lora-bold: 700;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 8px;
+
+    --layout-max-width: 1200px;
+    --nav-h: 0px;
+}
+
+/* =======================================================
+MOBILE STYLES
+======================================================= */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: yellow;
+}
+
+/* =======================================================
+DESKTOP STYLES
+========================================================*/
+@media (min-width: 1024px) {}
