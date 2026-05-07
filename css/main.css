@@ -67,8 +67,26 @@ body {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: yellow;
+body {}
+
+header {
+    outline: 1px solid red;
+}
+
+aside {
+    outline: 1px dotted orange;
+}
+
+nav {
+    outline: 1px solid green;
+}
+
+.about {
+    outline: 1px solid purple;
+}
+
+.skills {
+    outline: 1px solid blue;
 }
 
 /* =======================================================
