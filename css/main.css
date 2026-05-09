@@ -4,17 +4,17 @@ GLOBAL STYLES
 :root {
 
     /* Style Guide-Color */
-    --primary-background: ;
-    --secondary-background: ;
-    --accent-background: ;
-    --primary-text: black;
-    --secondary-text: black;
-    --card-background-color: ;
-    --card-border: ;
-    --nav-bar-background: ;
-    --button-background: ;
-    --button-border: ;
-    --footer-background: ;
+    --primary-background: #fdf8f7;
+    --secondary-background: #f2ebe9;
+    --accent-background: #610e03;
+    --primary-text: #1c0a08;
+    --secondary-text: #8c5d58;
+    --card-background-color: #ffffff;
+    --card-border: #bfacaa;
+    --nav-bar-background: #1c0a08;
+    --button-background: #610e03;
+    --button-border: #610e03;
+    --footer-background: #1c0a08;
 
     /* Font Families */
     --heading-font: "Playfair Display", serif;
@@ -23,13 +23,13 @@ GLOBAL STYLES
     /* Font Sizes */
     --h1-heading-size: 3rem;
     --h2-heading-size: 1.75rem;
-    --h3-heading-size: 1.25em;
+    --h3-heading-size: 1.25rem;
     --body-standard-size: 1.15rem;
     --body-xs-font-size: 0.75rem;
     --button-text-size: 1.25rem;
 
     /* Line Heights */
-    --h1-line-height: 2.813rem;
+    --h1-line-height: 3.5rem;
     --h2-line-height: 2.25rem;
     --h3-line-height: 1.625rem;
     --body-standard-line-height: 1.625rem;
@@ -47,13 +47,13 @@ GLOBAL STYLES
     --lora-semibold: 600;
     --lora-bold: 700;
 
-    /* Border Radius */
+    /* Border Radius 
     --border-radius-sm: 4px;
     --border-radius-md: 6px;
     --border-radius-lg: 8px;
-
+   
     --layout-max-width: 1200px;
-    --nav-h: 0px;
+    --nav-h: 0px; */
 }
 
 /* =======================================================
@@ -67,27 +67,65 @@ body {
     scroll-behavior: smooth;
 }
 
-body {}
-
+/* HEADER */
 header {
-    outline: 1px solid red;
-}
-
-aside {
-    outline: 1px dotted orange;
+    background-color: var(--accent-background);
 }
 
 nav {
-    outline: 1px solid green;
+    display: flex;
+    padding: 30px 0px 60px 0px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--nav-bar-background);
+    font-family: var(--body-text);
+    font-size: var(--h3-heading-size);
+    font-weight: var(--lora-regular);
+    line-height: var(--h3-line-height);
+    color: var(--secondary-text)
 }
 
-.about {
-    outline: 1px solid purple;
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.skills {
-    outline: 1px solid blue;
+nav ul li a {
+    text-decoration: none;
 }
+
+.header-content {
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: var(--h1-heading-size);
+    line-height: var(--h1-heading-size);
+    font-weight: var(--playfair-display-sc-bold-italic);
+    padding-bottom: 30px;
+    color: var(--primary-text);
+}
+
+.tagline,
+.job-intro {
+    font-family: var(--body-text);
+    font-size: var(--body-standard-size);
+    line-height: var(--body-standard-line-height);
+    font-weight: var(--lora-bold);
+    color: var(--secondary-text);
+}
+
+aside {
+    display: none;
+}
+
+
 
 /* =======================================================
 DESKTOP STYLES
