@@ -151,8 +151,6 @@ img {
 }
 
 .project-title {
-    /* color: red; */
-    padding-bottom: 40px;
     font-family: var(--heading-font);
     font-size: var(--h3-heading-size);
     line-height: var(--h3-line-height);
@@ -160,27 +158,35 @@ img {
 }
 
 .project-info {
-    /* color: red; */
     padding-bottom: 30px;
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
+    font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
 }
 
 .project-tags {
-    /* color: red; */
     padding-bottom: 40px;
+    font-family: var(--body-text);
+    font-size: var(--body-standard-size);
+    line-height: var(--body-standard-line-height);
+    font-weight: var(--lora-regular);
+    text-align: start;
+    padding: 10px;
 }
 
 .project-tags li {
-    /* color: red; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     list-style: none;
+    font-family: var(--body-text);
+    font-size: var(--body-standard-size);
+    line-height: var(--body-standard-line-height);
+    font-weight: var(--lora-semibold);
 }
 
 .project-tags li span {
@@ -189,11 +195,13 @@ img {
     background-color: #e0e7ff;
     color: #3730a3;
     font-size: 0.85rem;
+    margin: 3px;
 }
 
 .project-link {
-    /* color: red; */
+    color: red;
     padding-bottom: 40px;
+
 }
 
 /* =======================================================
