@@ -8,9 +8,7 @@ GLOBAL STYLES
     --secondary-background: #f2ebe9;
     --accent-background: #610e03;
     --primary-text: #1c0a08;
-    --secondary-text: #8c5d58;
-    --card-background-color: #ffffff;
-    --card-border: #bfacaa;
+    --secondary-text: white;
     --nav-bar-background: #1c0a08;
     --button-background: #610e03;
     --button-border: #610e03;
@@ -24,7 +22,7 @@ GLOBAL STYLES
     --h1-heading-size: 3rem;
     --h2-heading-size: 1.75rem;
     --h3-heading-size: 1.25rem;
-    --body-standard-size: 1.15rem;
+    --body-standard-size: 1rem;
     --button-text-size: 1.25rem;
     --nav-font-size: 1.125rem;
 
@@ -84,7 +82,7 @@ nav ul {
     font-size: var(--nav-font-size);
     font-weight: var(--lora-regular);
     line-height: var(--nav-line-height);
-    color: white;
+    color: var(--secondary-text);
 }
 
 nav ul li a {
@@ -93,7 +91,7 @@ nav ul li a {
 
 .cta-link {
     background-color: var(--secondary-background);
-    color: var(--secondary-text);
+    color: var(--primary-text);
     padding: 10px;
     border-radius: 20px;
 }
@@ -200,6 +198,7 @@ img {
 /* Skills */
 .skills {
     background-color: var(--secondary-background);
+    margin-bottom: 80px;
 }
 
 .skills h2 {
@@ -239,12 +238,52 @@ img {
     list-style: none;
     padding: 4px 12px;
     border-radius: 999px;
-    background-color: #e0e7ff;
-    color: #3730a3;
+    background-color: var(--button-background);
+    color: var(--secondary-text);
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
+}
+
+/* About Me */
+
+.about-container {
+    margin: 80px 10px 80px;
+}
+
+.profile-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.about h2 {
+    font-family: var(--heading-font);
+    font-size: var(--h2-heading-size);
+    line-height: var(--h2-line-height);
+    font-weight: var(--playfair-display-sc-black-italic);
+    text-align: center;
+    margin: 40px 0 60px;
+}
+
+.about h3 {
+    font-family: var(--heading-font);
+    font-size: var(--h3-heading-size);
+    line-height: var(--h3-line-height);
+    font-weight: var(--playfair-display-sc-black-italic);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-me {
+    padding-bottom: 30px;
+    font-family: var(--body-text);
+    font-size: var(--body-standard-size);
+    line-height: var(--body-standard-line-height);
+    font-weight: var(--lora-regular);
+    text-align: start;
+    padding: 10px;
 }
 
 /* =======================================================
