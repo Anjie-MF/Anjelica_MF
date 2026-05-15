@@ -109,14 +109,14 @@ h1 {
     color: white;
 }
 
-.tagline,
-.job-intro {
+.intro {
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-semibold);
     color: white;
-    margin: 0 10px 30px;
+    margin: 0 10px;
+    padding-bottom: 30px;
 }
 
 /* Projects */
@@ -308,7 +308,7 @@ img {
 
 .form-container {
     max-width: 450px;
-    margin: 0 20px 30px;
+    margin: 0 auto 30px;
 }
 
 form {
@@ -407,7 +407,7 @@ DESKTOP STYLES
 ========================================================*/
 @media (min-width: 1024px) {
 
-    header {
+    .intro {
         margin-bottom: 140px;
     }
 
@@ -415,8 +415,7 @@ DESKTOP STYLES
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        margin: 80px 0 80px;
-        padding-right: 30px;
+        padding: 80px 30px 80px 0;
     }
 
     h1 {
@@ -429,9 +428,51 @@ DESKTOP STYLES
 
     .project-container {
         display: flex;
-        justify-content: space-between;
-        align-items: stretch;
         flex-flow: row wrap;
+        gap: 20px;
+        row-gap: 40px;
     }
 
+    .project-card {
+        flex: 1 1 300px;
+    }
+
+    .project-card img {
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    .skils-container {
+        padding-bottom: 140px;
+    }
+
+    .frontend-container,
+    .design-container,
+    .tooling-container {
+        justify-content: center;
+    }
+
+    .about-container {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        padding: 0 25px;
+        margin: 160px 0 140px 0;
+    }
+
+    .about-container img {
+        width: 30%;
+        display: block;
+        margin: auto;
+    }
+
+    .form-container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .social-links-container {
+        padding-bottom: 140px;
+    }
 }
