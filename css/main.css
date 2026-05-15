@@ -11,7 +11,7 @@ GLOBAL STYLES
     --secondary-text: white;
     --nav-bar-background: #1c0a08;
     --button-background: #610e03;
-    --button-border: #610e03;
+    --button-border: white;
     --footer-background: #1c0a08;
 
     /* Font Families */
@@ -285,6 +285,127 @@ img {
     text-align: start;
     padding: 10px;
 }
+
+/* Footer */
+
+.contact-container {
+    background-color: var(--accent-background);
+}
+
+.contact h2 {
+    margin: 80px 0 60px;
+    font-family: var(--heading-font);
+    font-size: var(--h2-heading-size);
+    line-height: var(--h2-line-height);
+    font-weight: var(--playfair-display-sc-black-italic);
+    text-align: center;
+    color: var(--secondary-text);
+}
+
+.contact h3 {
+    font-family: var(--heading-font);
+    font-size: var(--h3-heading-size);
+    line-height: var(--h3-line-height);
+    font-weight: var(--playfair-display-sc-black-italic);
+    text-align: center;
+    color: var(--secondary-text);
+}
+
+.form-container {
+    max-width: 450px;
+    margin: 0 20px 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 1rem 0 0.4rem;
+    font-weight: var(--lora-medium);
+    color: var(--secondary-text);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: var(--lora-regular);
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #333;
+}
+
+button {
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+    border: var(--button-border);
+    border-radius: 6px;
+    cursor: pointer;
+    font: var(--lora-regular);
+    color: var(--primary-text);
+    background-color: var(--secondary-background);
+    max-width: fit-content;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.social-links-container {
+    margin-bottom: 20px;
+}
+
+.social-links-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0;
+    margin: 1rem 0 0;
+    list-style: none;
+}
+
+.social-links-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
+
+.social-links-container a:hover {
+    opacity: 0.7;
+}
+
+.social-links-container a:focus {
+    outline: 2px solid #333;
+    outline-offset: 4px;
+}
+
+.social-links-container i {
+    color: white;
+}
+
+.fem-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: var(--lora-semibold);
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+}
+
 
 /* =======================================================
 DESKTOP STYLES
