@@ -428,21 +428,17 @@ DESKTOP STYLES
     }
 
     .project-container {
-        display: flex;
-        flex-flow: row wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         row-gap: 40px;
-    }
-
-    .project-card {
-        flex: 1 1 300px;
     }
 
     .project-card img {
         width: 90%;
         display: block;
         margin: auto;
-    }
+    } 
 
     .skills-container {
         padding-bottom: 140px;
