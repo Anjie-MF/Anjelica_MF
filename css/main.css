@@ -55,7 +55,7 @@ body {
     margin: 0;
 }
 
-.skip {
+.skip-link {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -64,7 +64,7 @@ body {
   overflow: hidden;
 }
 
-.skip:focus {
+.skip-link:focus {
   position: static;
   width: auto;
   height: auto;
