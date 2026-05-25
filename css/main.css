@@ -55,6 +55,21 @@ body {
     margin: 0;
 }
 
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
 /* Nav Bar */
 header {
     background-color: var(--accent-background);
