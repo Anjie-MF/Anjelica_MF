@@ -13,9 +13,8 @@ Hey! I'm Anjelica. A Myspace millennial who turned a lifelong curiosity for tink
 - Figma (design-to-code workflow)
 - Chrome DevTools
 - Netlify (deployment)
-- Flexbox
-- CSS Grid
 - Responsive Web Design
+- Vercel (deployment)
 
 ## AI Collaboration
 AI tools were primarily used for debugging support, brainstorming approaches, and 
