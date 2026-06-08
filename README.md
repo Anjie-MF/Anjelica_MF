@@ -1,7 +1,6 @@
 # Anjelica | Front-End Developer Portfolio
 
-Hey! I'm Anjelica. A Myspace millennial who finally figured out what I was actually doing.
-I'm a front-end developer focused on building responsive, accessible websites.
+Hey! I'm Anjelica. A Myspace millennial who turned a lifelong curiosity for tinkering with layouts into front-end development.
 
 ## Languages & Frameworks
 - HTML5
@@ -35,12 +34,12 @@ What didn't:
 - Incorrect assumptions about component structure
 
 ## Current Focus
-- Strengthening JavaScript and API integration skills
+- Building practical React experience through real-world projects, including component architecture and hooks (useState)
 - Improving debugging and component architecture workflows
 - Translating abstract ideas into structured, production-ready interfaces
 
 ## Connect With Me
-- 🌐 Portfolio — Coming soon!
+- 🌐 Portfolio — [anjelica-mf.vercel.app](https://anjelica-mf.vercel.app/)
 - LinkedIn — [anjelica may-farmer](https://www.linkedin.com/in/anjiemay23/)
 - GitHub — [@anjie-mf](https://github.com/Anjie-MF)
 - Frontend Mentor — [@anjie_mf](https://www.frontendmentor.io/profile/Anjie-MF)
