@@ -46,28 +46,34 @@ GLOBAL STYLES
     --lora-bold: 700;
 }
 
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 /* =======================================================
 MOBILE STYLES
 ======================================================= */
 html,
 body {
-    scroll-behavior: smooth;
     margin: 0;
 }
 
 .skip-link {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .skip-link:focus {
-  position: static;
-  width: auto;
-  height: auto;
+    position: static;
+    width: auto;
+    height: auto;
 }
 
 /* Nav Bar */
@@ -453,7 +459,7 @@ DESKTOP STYLES
         width: 90%;
         display: block;
         margin: auto;
-    } 
+    }
 
     .skills-container {
         padding-bottom: 140px;
