@@ -387,6 +387,7 @@ button:hover {
     align-items: center;
     width: 3rem;
     height: 3rem;
+    text-decoration: none;
 }
 
 .social-links-container a:hover {
