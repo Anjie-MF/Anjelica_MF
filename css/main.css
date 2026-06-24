@@ -272,7 +272,7 @@ img {
 .profile-img {
     display: block;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 60%;
 }
 
 .about h2 {
@@ -281,16 +281,7 @@ img {
     line-height: var(--h2-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
     text-align: center;
-    margin: 40px 0 60px;
-}
-
-.about h3 {
-    font-family: var(--heading-font);
-    font-size: var(--h3-heading-size);
-    line-height: var(--h3-line-height);
-    font-weight: var(--playfair-display-sc-black-italic);
-    text-align: center;
-    margin-bottom: 40px;
+    margin: 20px 0 60px;
 }
 
 .about-me {
@@ -300,7 +291,6 @@ img {
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
-    padding: 10px;
 }
 
 /* Footer */
