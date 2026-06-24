@@ -385,8 +385,8 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 44px;
-    height: 44px;
+    width: 3rem;
+    height: 3rem;
 }
 
 .social-links-container a:hover {
@@ -400,15 +400,16 @@ button:hover {
 
 .social-links-container i {
     color: white;
+    font-size: 1.25rem;
 }
 
 .fem-icon {
-    width: 24px;
-    height: 24px;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: var(--lora-semibold);
     border: 1px solid white;
     border-radius: 4px;
