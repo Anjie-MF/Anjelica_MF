@@ -4,15 +4,18 @@ GLOBAL STYLES
 :root {
 
     /* Style Guide-Color */
-    --primary-background: #fdf8f7;
-    --secondary-background: #f2ebe9;
-    --accent-background: #610e03;
-    --primary-text: #1c0a08;
+    --primary-background: #0f0e0d;
+    --secondary-background: #2a2724;
+    --accent-background: #b8924a;
+    --primary-text: #f0ece6;
     --secondary-text: white;
-    --nav-bar-background: #1c0a08;
-    --button-background: #610e03;
-    --button-border: white;
-    --footer-background: #1c0a08;
+    /* --muted-text: #cfc7bd; */
+    --nav-bar-background: #0f0e0d;
+    --footer-background: #0f0e0d;
+    --button-background: #b8924a;
+    --button-border: #c9a75a;
+    --input-background: #2a2724;
+    --input-border: #3a3633;
 
     /* Font Families */
     --heading-font: "Playfair Display", serif;
@@ -59,6 +62,8 @@ MOBILE STYLES
 html,
 body {
     margin: 0;
+    background-color: var(--primary-background);
+    color: var(--primary-text);
 }
 
 .skip-link {
@@ -110,6 +115,10 @@ nav ul li a {
     color: var(--secondary-text);
 }
 
+nav ul li a:hover {
+    color: var(--muted-text);
+}
+
 .cta-link {
     background-color: var(--secondary-background);
     color: var(--primary-text);
@@ -119,6 +128,7 @@ nav ul li a {
 
 /* Header */
 .header-content {
+    background-color: var(--accent-background);
     text-align: center;
 }
 
@@ -128,7 +138,7 @@ h1 {
     line-height: var(--h1-line-height);
     font-weight: var(--playfair-display-sc-bold-italic);
     margin: 0 10px 30px;
-    color: white;
+    color: var(--secondary-text);
 }
 
 .intro {
@@ -136,12 +146,16 @@ h1 {
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-semibold);
-    color: white;
+    color: var(--muted-text);
     margin: 0 10px;
     padding-bottom: 30px;
 }
 
 /* Projects */
+.projects {
+    background-color: var(--primary-background);
+}
+
 .projects h2 {
     margin: 80px 0 20px;
     font-family: var(--heading-font);
@@ -149,6 +163,7 @@ h1 {
     line-height: var(--h2-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
     text-align: center;
+    color: var(--primary-text);
 }
 
 .project-card {
@@ -166,6 +181,7 @@ img {
     font-size: var(--h3-heading-size);
     line-height: var(--h3-line-height);
     text-align: center;
+    color: var(--primary-text);
 }
 
 .project-info {
@@ -176,6 +192,7 @@ img {
     font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
+    color: var(--primary-text);
 }
 
 .project-tags {
@@ -186,6 +203,7 @@ img {
     font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
+    color: var(--primary-text);
 }
 
 .project-tags li {
@@ -196,6 +214,7 @@ img {
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
+    color: var(--primary-text);
 }
 
 .project-tags li span {
@@ -206,12 +225,17 @@ img {
     display: inline-block;
     text-align: center;
     background-color: var(--button-background);
-    color: white;
+    color: var(--secondary-text);
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px;
     margin-bottom: 40px;
+    border: 1px solid var(--button-border);
+}
+
+.project-link:hover {
+    opacity: 0.85;
 }
 
 /* Skills */
@@ -227,6 +251,7 @@ img {
     line-height: var(--h2-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
     text-align: center;
+    color: var(--primary-text);
 }
 
 .skills h3 {
@@ -236,6 +261,7 @@ img {
     line-height: var(--h3-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
     text-align: center;
+    color: var(--primary-text);
 }
 
 .frontend-container,
@@ -267,6 +293,10 @@ img {
 
 /* About Me */
 
+.about {
+    background-color: var(--primary-background);
+}
+
 .about-container {
     margin: 80px 10px 80px;
 }
@@ -284,6 +314,7 @@ img {
     font-weight: var(--playfair-display-sc-black-italic);
     text-align: center;
     margin: 20px 0 60px;
+    color: var(--primary-text);
 }
 
 .about-me {
@@ -293,12 +324,13 @@ img {
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
+    color: var(--primary-text);
 }
 
-/* Footer */
+/* Footer / Contact */
 
 .contact-container {
-    background-color: var(--accent-background);
+    background-color: var(--footer-background);
 }
 
 .contact h2 {
@@ -340,27 +372,34 @@ input,
 textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
     border-radius: 6px;
     font-weight: var(--lora-regular);
+    background-color: var(--input-background);
+    color: var(--primary-text);
     outline: none;
+    box-sizing: border-box;
 }
 
 input:focus,
 textarea:focus {
-    border-color: #333;
+    border-color: var(--muted-text);
+    outline: 2px solid var(--muted-text);
+    outline-offset: 2px;
 }
 
 button {
     margin-top: 1.25rem;
     padding: 0.75rem;
-    border: none;
+    outline: 2px solid var(--muted-text);
     border-radius: 6px;
     cursor: pointer;
     font-weight: var(--lora-regular);
-    color: var(--primary-text);
-    background-color: var(--secondary-background);
+    color: var(--secondary-text);
+    background-color: var(--button-background);
     max-width: fit-content;
+    font-family: var(--body-text);
+    font-size: var(--body-standard-size);
 }
 
 button:hover {
@@ -395,12 +434,12 @@ button:hover {
 }
 
 .social-links-container a:focus {
-    outline: 2px solid #333;
+    outline: 2px solid var(--muted-text);
     outline-offset: 4px;
 }
 
 .social-links-container i {
-    color: white;
+    color: var(--muted-text);
     font-size: 1.25rem;
 }
 
@@ -412,9 +451,9 @@ button:hover {
     justify-content: center;
     font-size: 0.9rem;
     font-weight: var(--lora-semibold);
-    border: 1px solid white;
+    border: 1px solid var(--muted-text);
     border-radius: 4px;
-    color: white;
+    color: var(--muted-text);
 }
 
 
