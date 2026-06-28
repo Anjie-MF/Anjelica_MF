@@ -4,18 +4,22 @@ GLOBAL STYLES
 :root {
 
     /* Style Guide-Color */
-    --primary-background: #0f0e0d;
-    --secondary-background: #2a2724;
-    --accent-background: #b8924a;
-    --primary-text: #f0ece6;
-    --secondary-text: white;
-    /* --muted-text: #cfc7bd; */
-    --nav-bar-background: #0f0e0d;
-    --footer-background: #0f0e0d;
-    --button-background: #b8924a;
-    --button-border: #c9a75a;
-    --input-background: #2a2724;
-    --input-border: #3a3633;
+    --primary-background: #1F2A38;
+    --secondary-background: #F5E9D8;
+    --primary-text: #F5E9D8;
+    --secondary-text: #8a96a3;
+    --body-text-dark: #3B3B46;
+    --gold: #B08D57;
+    --plum: #6A5565;
+    --plum-light: #c4b0bf;
+    --nav-bar-background: #1F2A38;
+    --footer-background: #1F2A38;
+    --button-background: #6A5565;
+    --button-border: #6A5565;
+    --input-background: #2a3a4d;
+    --input-border: #2e3a4a;
+    --divider: #2e3a4a;
+    --divider-light: #e0d4c2;
 
     /* Font Families */
     --heading-font: "Playfair Display", serif;
@@ -81,18 +85,21 @@ body {
     height: auto;
 }
 
-/* Nav Bar */
+/* -------------------------------------------------------
+Nav
+ ------------------------------------------------------- */
 header {
-    background-color: var(--accent-background);
+    background-color: var(--primary-background);
+    border-bottom: 1px solid var(--divider);
 }
 
 nav {
     display: flex;
-    padding: 30px 0px 60px;
+    padding: 20px 20x;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--accent-background);
-    margin: 0 10px;
+    background-color: var(--primary-background);
+    margin: 0;
 }
 
 nav ul {
@@ -113,23 +120,47 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: var(--secondary-text);
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
 }
 
 nav ul li a:hover {
-    color: var(--muted-text);
+    color: var(--gold);
 }
 
 .cta-link {
-    background-color: var(--secondary-background);
-    color: var(--primary-text);
-    padding: 10px;
+    background-color: transparent;
+    color: var(--plum-light);
+    padding: 8px 16px;
     border-radius: 20px;
+    border: 1px solid var(--plum);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Header */
+.cta-link:hover {
+    background-color: var(--plum);
+    color: var(--primary-text);
+}
+
+/* -------------------------------------------------------
+Hero
+ ------------------------------------------------------- */
 .header-content {
-    background-color: var(--accent-background);
+    background-color: var(--primary-background);
     text-align: center;
+    padding: 60px 20px 60px;
+    border-bottom: 1px solid var(--divider);
+}
+
+.eyebrow {
+    font-family: var(--body-text);
+    font-size: var(--eyebrow-size);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 16px;
 }
 
 h1 {
@@ -137,33 +168,48 @@ h1 {
     font-size: var(--h1-heading-size);
     line-height: var(--h1-line-height);
     font-weight: var(--playfair-display-sc-bold-italic);
-    margin: 0 10px 30px;
-    color: var(--secondary-text);
+    font-style: italic;
+    margin: 0 10px 24px;
+    color: var(--primary-text);
 }
 
 .intro {
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
-    font-weight: var(--lora-semibold);
-    color: var(--muted-text);
-    margin: 0 10px;
-    padding-bottom: 30px;
+    font-weight: var(--lora-regular);
+    color: var(--secondary-text);
+    margin: 0 auto;
+    max-width: 560px;
+    padding-bottom: 36px;
 }
 
-/* Projects */
+/* -------------------------------------------------------
+Projects  
+ ------------------------------------------------------- */
 .projects {
-    background-color: var(--primary-background);
+    background-color: var(--secondary-background);
+}
+
+.projects .section-eyebrow {
+    font-family: var(--body-text);
+    font-size: var(--eyebrow-size);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--plum);
+    text-align: center;
+    margin: 80px 0 8px;
 }
 
 .projects h2 {
-    margin: 80px 0 20px;
+    margin: 0 0 40px;
     font-family: var(--heading-font);
     font-size: var(--h2-heading-size);
     line-height: var(--h2-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
+    font-style: italic;
     text-align: center;
-    color: var(--primary-text);
+    color: var(--primary-background);
 }
 
 .project-card {
@@ -181,29 +227,28 @@ img {
     font-size: var(--h3-heading-size);
     line-height: var(--h3-line-height);
     text-align: center;
-    color: var(--primary-text);
+    font-style: italic;
+    color: var(--primary-background);
 }
 
 .project-info {
-    padding-bottom: 30px;
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
-    color: var(--primary-text);
+    color: var(--body-text-dark);
 }
 
 .project-tags {
-    padding-bottom: 40px;
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
-    color: var(--primary-text);
+    color: var(--body-text-dark);
 }
 
 .project-tags li {
@@ -214,54 +259,76 @@ img {
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
-    color: var(--primary-text);
+    color: var(--body-text-dark);
 }
 
 .project-tags li span {
     font-weight: var(--lora-bold);
+    color: var(--gold);
 }
 
 .project-link {
     display: inline-block;
     text-align: center;
-    background-color: var(--button-background);
-    color: var(--secondary-text);
+    background-color: transparent;
+    color: var(--plum);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
-    padding: 10px;
+    padding: 9px 20px;
     margin-bottom: 40px;
-    border: 1px solid var(--button-border);
+    border: 1px solid var(--plum);
+    font-family: var(--body-text);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .project-link:hover {
-    opacity: 0.85;
+    background-color: var(--plum);
+    color: var(--primary-text)
 }
 
-/* Skills */
+/* -------------------------------------------------------
+Skills  
+ ------------------------------------------------------- */
 .skills {
-    background-color: var(--secondary-background);
-    margin-bottom: 80px;
+    background-color: var(--primary-background);
+    padding-bottom: 80px;
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+}
+
+.skills .section-eyebrow {
+    font-family: var(--body-text);
+    font-size: var(--eyebrow-size);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin: 60px 0 8px;
 }
 
 .skills h2 {
-    margin: 60px 0 40px;
+    margin: 0 0 32px;
     font-family: var(--heading-font);
     font-size: var(--h2-heading-size);
     line-height: var(--h2-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
+    font-style: italic;
     text-align: center;
     color: var(--primary-text);
 }
 
 .skills h3 {
-    margin-bottom: 20px;
-    font-family: var(--heading-font);
-    font-size: var(--h3-heading-size);
-    line-height: var(--h3-line-height);
-    font-weight: var(--playfair-display-sc-black-italic);
+    margin-bottom: 14px;
+    font-family: var(--body-text);
+    font-size: var(--eyebrow-size);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     text-align: center;
-    color: var(--primary-text);
+    color: var(--gold);
 }
 
 .frontend-container,
@@ -281,20 +348,22 @@ img {
 .design,
 .tool {
     list-style: none;
-    padding: 4px 12px;
+    padding: 4px 14px;
     border-radius: 999px;
-    background-color: var(--button-background);
-    color: var(--secondary-text);
+    background-color: transparent;
+    color: var(--plum-light);
+    border: 1px solid var(--plum);
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
 }
 
-/* About Me */
-
+/* -------------------------------------------------------
+About 
+ ------------------------------------------------------- */
 .about {
-    background-color: var(--primary-background);
+    background-color: var(--secondary-background);
 }
 
 .about-container {
@@ -307,14 +376,25 @@ img {
     max-width: 80%;
 }
 
+.about .section-eyebrow {
+    font-family: var(--body-text);
+    font-size: var(--eyebrow-size);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--plum);
+    text-align: center;
+    margin: 0 0 8px;
+}
+
 .about h2 {
     font-family: var(--heading-font);
     font-size: var(--h2-heading-size);
     line-height: var(--h2-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
+    font-style: italic;
     text-align: center;
-    margin: 20px 0 60px;
-    color: var(--primary-text);
+    margin: 0 0 40px;
+    color: var(--primary-background);
 }
 
 .about-me {
@@ -324,32 +404,36 @@ img {
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
-    color: var(--primary-text);
+    color: var(--body-text-dark);
 }
 
-/* Footer / Contact */
-
+/* -------------------------------------------------------
+Footer / Contact  
+ ------------------------------------------------------- */
 .contact-container {
     background-color: var(--footer-background);
+    border-top: 1px solid var(--divider);
 }
 
 .contact h2 {
-    margin: 80px 0 60px;
+    margin: 80px 0 80px;
     font-family: var(--heading-font);
     font-size: var(--h2-heading-size);
     line-height: var(--h2-line-height);
     font-weight: var(--playfair-display-sc-black-italic);
+    font-style: italic;
     text-align: center;
-    color: var(--secondary-text);
+    color: var(--primary-text);
 }
 
 .contact h3 {
-    font-family: var(--heading-font);
-    font-size: var(--h3-heading-size);
-    line-height: var(--h3-line-height);
-    font-weight: var(--playfair-display-sc-black-italic);
+    font-family: var(--body-text);
+    font-size: var(--eyebrow-size);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     text-align: center;
-    color: var(--secondary-text);
+    color: var(--gold);
+    margin: 40px 0 10px;
 }
 
 .form-container {
@@ -364,7 +448,11 @@ form {
 
 label {
     margin: 1rem 0 0.4rem;
+    font-family: var(--body-text);
     font-weight: var(--lora-medium);
+    font-size: 0.8rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
     color: var(--secondary-text);
 }
 
@@ -373,7 +461,8 @@ textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--input-border);
-    border-radius: 6px;
+    border-radius: 4px;
+    font-family: var(--body-text);
     font-weight: var(--lora-regular);
     background-color: var(--input-background);
     color: var(--primary-text);
@@ -383,27 +472,30 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-color: var(--muted-text);
-    outline: 2px solid var(--muted-text);
-    outline-offset: 2px;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
 }
 
 button {
     margin-top: 1.25rem;
-    padding: 0.75rem;
-    outline: 2px solid var(--muted-text);
-    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    outline: 1px solid var(--plum);
+    border-radius: 3px;
     cursor: pointer;
-    font-weight: var(--lora-regular);
-    color: var(--secondary-text);
-    background-color: var(--button-background);
-    max-width: fit-content;
     font-family: var(--body-text);
-    font-size: var(--body-standard-size);
+    font-weight: var(--lora-semibold);
+    font-size: 0.08rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: var(--plum-light);
+    background-color: transparent;
+    max-width: fit-content;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 button:hover {
-    opacity: 0.85;
+    background-color: var(--plum);
+    color: var(--primary-text);
 }
 
 .social-links-container {
@@ -427,6 +519,7 @@ button:hover {
     width: 4.5rem;
     height: 4.5rem;
     text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
 .social-links-container a:hover {
@@ -434,12 +527,12 @@ button:hover {
 }
 
 .social-links-container a:focus {
-    outline: 2px solid var(--muted-text);
+    outline: 2px solid var(--gold);
     outline-offset: 4px;
 }
 
 .social-links-container i {
-    color: var(--muted-text);
+    color: var(--plum-light);
     font-size: 3rem;
 }
 
@@ -451,9 +544,10 @@ button:hover {
     justify-content: center;
     font-size: 3rem;
     font-weight: var(--lora-semibold);
-    border: 3px solid var(--muted-text);
+    font-family: var(--body-text);
+    border: 3px solid var(--plum);
     border-radius: 6px;
-    color: var(--muted-text);
+    color: var(--plum-light);
 }
 
 
@@ -476,22 +570,23 @@ DESKTOP STYLES
 @media (min-width: 1024px) {
 
     .intro {
-        margin-bottom: 140px;
+        margin-bottom: 80px;
     }
 
     nav {
         display: flex;
         justify-content: flex-end;
-        align-items: flex-end;
-        padding: 80px 30px 80px 0;
+        align-items: center;
+        padding: 24px 40px;
     }
 
     h1 {
         margin-bottom: 40px;
+        font-size: 4rem;
     }
 
     .projects h2 {
-        margin: 140px 0 80px;
+        margin: 0 0 80px;
     }
 
     .project-container {
@@ -499,6 +594,7 @@ DESKTOP STYLES
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         row-gap: 40px;
+        padding: 0 40px 80px;
     }
 
     .project-card img {
@@ -508,7 +604,7 @@ DESKTOP STYLES
     }
 
     .skills-container {
-        padding-bottom: 140px;
+        padding-bottom: 80px;
     }
 
     .frontend-container,
