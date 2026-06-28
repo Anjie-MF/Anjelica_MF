@@ -90,12 +90,11 @@ Nav
  ------------------------------------------------------- */
 header {
     background-color: var(--primary-background);
-    border-bottom: 1px solid var(--divider);
 }
 
 nav {
     display: flex;
-    padding: 20px 20x;
+    padding: 20px 20px;
     justify-content: space-around;
     align-items: center;
     background-color: var(--primary-background);
@@ -150,8 +149,7 @@ Hero
 .header-content {
     background-color: var(--primary-background);
     text-align: center;
-    padding: 60px 20px 60px;
-    border-bottom: 1px solid var(--divider);
+    padding: 60px 20px 30px;
 }
 
 .eyebrow {
@@ -297,7 +295,7 @@ Skills
     background-color: var(--primary-background);
     padding-bottom: 80px;
     border-top: 1px solid var(--divider);
-    border-bottom: 1px solid var(--divider);
+    /* border-bottom: 1px solid var(--divider); */
 }
 
 .skills .section-eyebrow {
@@ -368,11 +366,12 @@ About
 
 .about-container {
     margin: 80px 10px 80px;
+    background-color: var(--secondary-background);
 }
 
 .profile-img {
     display: block;
-    margin: 0 auto;
+    padding: 20px;
     max-width: 80%;
 }
 
@@ -412,7 +411,7 @@ Footer / Contact
  ------------------------------------------------------- */
 .contact-container {
     background-color: var(--footer-background);
-    border-top: 1px solid var(--divider);
+    /* border-top: 1px solid var(--divider); */
 }
 
 .contact h2 {
@@ -484,7 +483,7 @@ button {
     cursor: pointer;
     font-family: var(--body-text);
     font-weight: var(--lora-semibold);
-    font-size: 0.08rem;
+    font-size: 1rem;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
     color: var(--plum-light);
@@ -542,7 +541,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: var(--lora-semibold);
     font-family: var(--body-text);
     border: 3px solid var(--plum);
@@ -568,9 +567,8 @@ TABLET STYLES
 DESKTOP STYLES
 ========================================================*/
 @media (min-width: 1024px) {
-
-    .intro {
-        margin-bottom: 80px;
+    .header-content {
+        border: none;
     }
 
     nav {
@@ -603,10 +601,6 @@ DESKTOP STYLES
         margin: auto;
     }
 
-    .skills-container {
-        padding-bottom: 80px;
-    }
-
     .frontend-container,
     .design-container,
     .tooling-container {
@@ -619,6 +613,7 @@ DESKTOP STYLES
         align-items: center;
         padding: 0 25px;
         margin: 160px 0 140px 0;
+        background-color: var(--secondary-background);
     }
 
     .about-container img {
