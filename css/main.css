@@ -7,19 +7,17 @@ GLOBAL STYLES
     --primary-background: #1F2A38;
     --secondary-background: #F5E9D8;
     --primary-text: #F5E9D8;
-    --secondary-text: #8a96a3;
-    --body-text-dark: #3B3B46;
-    --gold: #B08D57;
-    --plum: #6A5565;
-    --plum-light: #c4b0bf;
+    --secondary-text: #bfc9d4;
+    --body-text-dark: black;
+    --gold: #6a522e;
+    --plum: #7f6a7a;
+    --plum-light: #594653;
     --nav-bar-background: #1F2A38;
     --footer-background: #1F2A38;
-    --button-background: #6A5565;
-    --button-border: #6A5565;
+    --button-background: #4E3C4A;
+    --button-border: #594653;
     --input-background: #2a3a4d;
     --input-border: #2e3a4a;
-    --divider: #2e3a4a;
-    --divider-light: #e0d4c2;
 
     /* Font Families */
     --heading-font: "Playfair Display", serif;
@@ -294,8 +292,6 @@ Skills
 .skills {
     background-color: var(--primary-background);
     padding-bottom: 80px;
-    border-top: 1px solid var(--divider);
-    /* border-bottom: 1px solid var(--divider); */
 }
 
 .skills .section-eyebrow {
@@ -355,6 +351,14 @@ Skills
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.front:hover,
+.design:hover,
+.tool:hover {
+    background-color: var(--plum);
+    color: var(--primary-text);
 }
 
 /* -------------------------------------------------------
@@ -411,7 +415,6 @@ Footer / Contact
  ------------------------------------------------------- */
 .contact-container {
     background-color: var(--footer-background);
-    /* border-top: 1px solid var(--divider); */
 }
 
 .contact h2 {
