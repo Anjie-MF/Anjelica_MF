@@ -30,6 +30,7 @@ GLOBAL STYLES
     --body-standard-size: 1rem;
     --button-text-size: 1.25rem;
     --nav-font-size: 1.125rem;
+    --eyebrow-size: 0.85rem;
 
     /* Line Heights */
     --h1-line-height: 3.5rem;
@@ -192,7 +193,7 @@ Projects
     font-size: var(--eyebrow-size);
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--plum);
+    color: var(--gold);
     text-align: center;
     margin: 80px 0 8px;
 }
@@ -234,7 +235,7 @@ img {
     font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
-    color: var(--body-text-dark);
+    color: var(--primary-background);
 }
 
 .project-tags {
@@ -244,7 +245,7 @@ img {
     font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
-    color: var(--body-text-dark);
+    color: var(--primary-background);
 }
 
 .project-tags li {
@@ -255,7 +256,7 @@ img {
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
-    color: var(--body-text-dark);
+    color: var(--primary-background);
 }
 
 .project-tags li span {
@@ -384,7 +385,7 @@ About
     font-size: var(--eyebrow-size);
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--plum);
+    color: var(--gold);
     text-align: center;
     margin: 0 0 8px;
 }
@@ -407,7 +408,7 @@ About
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
-    color: var(--body-text-dark);
+    color: var(--primary-background);
 }
 
 /* -------------------------------------------------------
