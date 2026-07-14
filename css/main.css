@@ -328,7 +328,8 @@ Skills
 
 .frontend-container,
 .design-container,
-.tooling-container {
+.tooling-container,
+.collaboration-container {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
@@ -341,7 +342,8 @@ Skills
 
 .front,
 .design,
-.tool {
+.tool,
+.collab {
     list-style: none;
     padding: 4px 14px;
     border-radius: 999px;
@@ -357,7 +359,8 @@ Skills
 
 .front:hover,
 .design:hover,
-.tool:hover {
+.tool:hover,
+.collab:hover {
     background-color: var(--plum);
     color: var(--primary-text);
 }
