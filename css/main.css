@@ -327,7 +327,7 @@ Skills
 }
 
 .frontend-container,
-.design-container,
+.develop-container,
 .tooling-container,
 .collaboration-container {
     display: flex;
@@ -341,7 +341,7 @@ Skills
 }
 
 .front,
-.design,
+.develop,
 .tool,
 .collab {
     list-style: none;
@@ -358,7 +358,7 @@ Skills
 }
 
 .front:hover,
-.design:hover,
+.develop:hover,
 .tool:hover,
 .collab:hover {
     background-color: var(--plum);
@@ -609,8 +609,9 @@ DESKTOP STYLES
     }
 
     .frontend-container,
-    .design-container,
-    .tooling-container {
+    .develop-container,
+    .tooling-container,
+    .collaboration-container {
         justify-content: center;
     }
 
