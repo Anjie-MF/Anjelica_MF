@@ -9,9 +9,9 @@ GLOBAL STYLES
     --primary-text: #F5E9D8;
     --secondary-text: #bfc9d4;
     --body-text-dark: black;
-    --gold: #6a522e;
-    --plum: #7f6a7a;
-    --plum-light: #594653;
+    --gold: #B38A51;
+    --plum: #AC95A5;
+    --plum-light: #fcedf7;
     --nav-bar-background: #1F2A38;
     --footer-background: #1F2A38;
     --button-background: #4E3C4A;
@@ -128,11 +128,11 @@ nav ul li a:hover {
 
 .cta-link {
     background-color: transparent;
-    color: var(--plum-light);
+    color: var(--secondary-text);
     padding: 8px 16px;
     border-radius: 20px;
     border: 1px solid var(--plum);
-    font-size: 0.95rem;
+    font-size: var(--nav-font-size);
     letter-spacing: 0.05em;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
