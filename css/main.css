@@ -445,6 +445,7 @@ Footer / Contact
 .form-container {
     max-width: 450px;
     margin: 0 auto 30px;
+    padding: 20px;
 }
 
 form {
