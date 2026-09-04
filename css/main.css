@@ -594,7 +594,7 @@ DESKTOP STYLES
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        padding: 0 40px 80px;
+        padding: 0 40px 40px;
         align-items: stretch;
     }
 
@@ -627,7 +627,7 @@ DESKTOP STYLES
         gap: 3rem;
         align-items: center;
         padding: 0 25px;
-        margin: 160px 0 140px 0;
+        margin: 0;
         background-color: var(--secondary-background);
     }
 
@@ -637,11 +637,13 @@ DESKTOP STYLES
         margin: auto;
     }
 
+    .about #about h2 {
+        margin: 0;
+    }
+
     .skills #skills {
         padding: 0 0 20px 0;
     }
-
-
 
     .contact-container h2 {
         margin: 0;
