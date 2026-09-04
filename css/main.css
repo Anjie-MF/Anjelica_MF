@@ -211,6 +211,7 @@ Projects
 
 .project-card {
     text-align: center;
+    margin: 10px;
 }
 
 img {
@@ -226,6 +227,7 @@ img {
     text-align: center;
     font-style: italic;
     color: var(--primary-background);
+    margin: 10px;
 }
 
 .project-info {
@@ -239,29 +241,17 @@ img {
 }
 
 .project-tags {
+    display: flex;
+    gap: 10px;
+    list-style: none;
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
     padding: 10px;
+    margin: 5px;
     color: var(--primary-background);
-}
-
-.project-tags li {
-    align-items: start;
-    margin: 10px 0;
-    list-style: none;
-    font-family: var(--body-text);
-    font-size: var(--body-standard-size);
-    line-height: var(--body-standard-line-height);
-    font-weight: var(--lora-regular);
-    color: var(--primary-background);
-}
-
-.project-tags li span {
-    font-weight: var(--lora-bold);
-    color: #6A502F;
 }
 
 .project-link {
@@ -592,21 +582,32 @@ DESKTOP STYLES
     }
 
     .projects h2 {
-        margin: 0 0 80px;
+        margin: 0 0 20px;
     }
 
     .project-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        row-gap: 40px;
         padding: 0 40px 80px;
+        align-items: stretch;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     .project-card img {
-        width: 90%;
-        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
         margin: auto;
+    }
+
+    .project-info {
+        flex-grow:1;
     }
 
     .frontend-container,
