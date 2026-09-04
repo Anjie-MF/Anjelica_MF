@@ -65,8 +65,7 @@ MOBILE STYLES
 html,
 body {
     margin: 0;
-    background-color: var(--primary-background);
-    color: var(--primary-text);
+    background-color: transparent;
 }
 
 .skip-link {
@@ -607,7 +606,7 @@ DESKTOP STYLES
     }
 
     .project-info {
-        flex-grow:1;
+        flex-grow: 1;
     }
 
     .frontend-container,
@@ -632,12 +631,16 @@ DESKTOP STYLES
         margin: auto;
     }
 
+    .contact-container h2 {
+        margin: 0;
+    }
+
     .form-container {
         max-width: 700px;
         margin: 0 auto;
     }
 
     .social-links-container {
-        padding-bottom: 140px;
+        padding-bottom: 40px;
     }
 }
