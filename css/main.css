@@ -59,13 +59,9 @@ GLOBAL STYLES
     }
 }
 
-/* =======================================================
-MOBILE STYLES
-======================================================= */
 html,
 body {
     margin: 0;
-    background-color: transparent;
 }
 
 .skip-link {
@@ -83,6 +79,9 @@ body {
     height: auto;
 }
 
+/* =======================================================
+MOBILE STYLES
+======================================================= */
 /* -------------------------------------------------------
 Nav
  ------------------------------------------------------- */
@@ -185,6 +184,7 @@ Projects
  ------------------------------------------------------- */
 .projects {
     background-color: var(--secondary-background);
+    padding: 20px 0;
 }
 
 .projects .section-eyebrow {
@@ -194,7 +194,7 @@ Projects
     text-transform: uppercase;
     color: #6A502F;
     text-align: center;
-    margin: 80px 0 8px;
+    margin: 20px 0 8px;
 }
 
 .projects h2 {
@@ -255,7 +255,7 @@ img {
 
 .project-link {
     display: inline-block;
-    text-align: center;
+    text-align: left;
     background-color: transparent;
     color: var(--primary-background);
     text-decoration: none;
@@ -281,7 +281,7 @@ Skills
  ------------------------------------------------------- */
 .skills {
     background-color: var(--primary-background);
-    padding-bottom: 80px;
+    padding: 20px 0;
 }
 
 .skills .section-eyebrow {
@@ -291,7 +291,7 @@ Skills
     text-transform: uppercase;
     color: var(--gold);
     text-align: center;
-    margin: 60px 0 8px;
+    margin: 20px 0 8px;
 }
 
 .skills h2 {
@@ -359,10 +359,11 @@ About
  ------------------------------------------------------- */
 .about {
     background-color: var(--secondary-background);
+    padding: 20px 0;
 }
 
 .about-container {
-    margin: 80px 10px 80px;
+    margin: 0 20px;
     background-color: var(--secondary-background);
 }
 
@@ -394,7 +395,7 @@ About
 }
 
 .about-me {
-    padding-bottom: 30px;
+    padding: 30px;
     font-family: var(--body-text);
     font-size: var(--body-standard-size);
     line-height: var(--body-standard-line-height);
@@ -403,15 +404,20 @@ About
     color: var(--primary-background);
 }
 
+.about-me p {
+    padding: 5px;
+}
+
 /* -------------------------------------------------------
 Footer / Contact  
  ------------------------------------------------------- */
 .contact-container {
     background-color: var(--footer-background);
+    overflow: hidden;
 }
 
 .contact h2 {
-    margin: 80px 0 80px;
+    margin: 20px 0 20px;
     font-family: var(--heading-font);
     font-size: var(--h2-heading-size);
     line-height: var(--h2-line-height);
@@ -630,6 +636,12 @@ DESKTOP STYLES
         display: block;
         margin: auto;
     }
+
+    .skills #skills {
+        padding: 0 0 20px 0;
+    }
+
+
 
     .contact-container h2 {
         margin: 0;
