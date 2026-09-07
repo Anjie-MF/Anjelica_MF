@@ -624,7 +624,6 @@ DESKTOP STYLES
 
     .about-container {
         display: flex;
-        gap: 3rem;
         align-items: center;
         padding: 0 25px;
         margin: 0;
@@ -637,7 +636,7 @@ DESKTOP STYLES
         margin: auto;
     }
 
-    .about #about h2 {
+    .about-container h2 {
         margin: 0;
     }
 
@@ -646,7 +645,7 @@ DESKTOP STYLES
     }
 
     .contact-container h2 {
-        margin: 0;
+        margin: 10px;
     }
 
     .form-container {
