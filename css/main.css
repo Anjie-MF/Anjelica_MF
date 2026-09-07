@@ -370,10 +370,11 @@ About
 .profile-img {
     display: block;
     padding: 20px;
-    max-width: 80%;
+    max-width: 60%;
 }
 
-.about .section-eyebrow {
+.about .section-eyebrow,
+.about-eyebrow {
     font-family: var(--body-text);
     font-size: var(--eyebrow-size);
     letter-spacing: 0.14em;
@@ -390,7 +391,7 @@ About
     font-weight: var(--playfair-display-sc-black-italic);
     font-style: italic;
     text-align: center;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     color: var(--primary-background);
 }
 
