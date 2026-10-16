@@ -239,7 +239,21 @@ img {
     color: var(--primary-background);
 }
 
-.project-tags {
+.role-title,
+.project-stack-title,
+.challenge-title {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: var(--body-text);
+    font-size: var(--body-standard-size);
+    font-weight: var(--playfair-display-sc-bold);
+    margin: 0 10px 0.25rem;
+    text-align: start;
+}
+
+.project-tags,
+.role,
+.challenge {
     display: flex;
     gap: 10px;
     list-style: none;
@@ -248,8 +262,8 @@ img {
     line-height: var(--body-standard-line-height);
     font-weight: var(--lora-regular);
     text-align: start;
-    padding: 10px;
-    margin: 5px;
+    padding: 0;
+    margin: 0 10px 0.25rem;
     color: var(--primary-background);
 }
 
