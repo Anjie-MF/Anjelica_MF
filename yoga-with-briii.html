@@ -144,7 +144,7 @@
         <span class="CSeyebrow">Case Study</span>
         <h1 class="caseStudy-h1">Yoga with Briii</h1>
         <p class="thesis">A real client marketing website for a mobile yoga instructor, where I
-          made photo-heavy pages load fast with AVIF images and LCP tuning.</p>
+          made photo-heavy pages load faster with AVIF images and LCP tuning.</p>
       </div>
       <img src="./images/yogaWithBriii_screenshot.avif" alt="screenshot of Yoga with Briii website">
       <dl>
@@ -166,14 +166,13 @@
     <!-- Project -->
     <section id="project">
       <h2 class="caseStudy-h2">1. The Project</h2>
-      <p class="caseStudy-p">Bria wanted to take her yoga instruction beyond one studio and reach groups, organizations,
-        and businesses.
-        She had social media accouts, but she didn't have a dedicated website where prospective clients could her
-        services in one place.
+      <p class="caseStudy-p">Bria wanted to take her yoga instruction beyond the studio and reach groups, organizations,
+        and businesses.She had social media accounts, but she didn't have a dedicated website where prospective clients
+        could find her services in one place.
       </p>
       <p class="caseStudy-p">I built a marketing website to introduce her business, explain her offering and teaching
-        philosophy, and give
-        vistors ways to connect with her. Those included a contact form and the option to schedule a call through
+        philosophy, and give vistors ways to connect with her. Those included a contact form and the option to schedule
+        a call through
         Calendly.
       </p>
       <p class="caseStudy-p">The idea was simple: give Bria a home base she could direct people to when she wanted to
@@ -184,16 +183,16 @@
     <section id="goal">
       <h2 class="caseStudy-h2">2. The Goal</h2>
       <ul>
-        <li>The challenge was simply putting information online. The website needed to support where Bria wanted to take
+        <li>The challenge wasn't simply putting information online. The website needed to support where Bria wanted to
+          take
           her business.
         </li>
         <li>I wanted visitors to be able to understand what she offered, determine whether <span>her</span> services
           suited <span>their</span> needs, and take the next step toward contacting her.
         </li>
         <li>That meant creating a professional, accessible website that could serve both individual clients and or
-          interested in yoga sessions.
-          And also meant keeping the implementation manageable while her business was still developing it systems for
-          payments, scheduling, and online visibility. </li>
+          interested in yoga sessions. And also meant keeping the implementation manageable while her business was still
+          developing it systems for payments, scheduling, and online visibility. </li>
       </ul>
     </section>
 
@@ -204,10 +203,10 @@
         of a website, but becuase my understanding of
         what the project needed changed as I got feedback, talked with Bria, and learned more
       </p>
-      <h3 class="caseStudy-h3">Startng with version 1.0</h3>
+      <h3 class="caseStudy-h3">Starting with version 1.0</h3>
       <p class="caseStudy-p"> My first version was a fairly generic landing page. After sharing with my coding bootcamp
         community, I received feedback about a sliding
-        hroizontal scrollbar that I caused me to reconsider the direction I was taking.
+        horizontal scrollbar that I caused me to reconsider the direction I was taking.
       </p>
       <p class="caseStudy-p">Rather than continuing to polish a design that hadn't been grounded in the clients
         requirements,
@@ -225,7 +224,7 @@
       </p>
       <p class="caseStudy-p">That distinction became important as the project evolved. I needed to build for the
         client's current
-        needs without creating unncessary complexity or committing her to systems she wasn't ready to use.
+        needs without creating unnecessary complexity or committing her to systems she wasn't ready to use.
       </p>
 
       <h3 class="caseStudy-h3">Choosing the right tools</h3>
@@ -233,7 +232,7 @@
         my newly
         acquired React skills, rather than a requirements of the client project. After working through that version, I
         decided React
-        introducted more complexity than this particular static marketing site needed. I returned to HTML, CSS, and
+        introduced more complexity than this particular static marketing site needed. I returned to HTML, CSS, and
         JavaScript for version 3.0. With the feedback about visual direction from the client, version 4.0 , the project
         has
         become a more considered site to her actual requirements rather than simply a collection of features that might
@@ -260,12 +259,12 @@
     <!-- Technical Spotlight -->
     <section id="technical">
       <h2 class="caseStudy-h2">4. Technical Spotlight</h2>
-      <p class="caseStudy-p">One of the most headscratching parts of this project was image-loading promblems.
+      <p class="caseStudy-p">One of the most headscratching parts of this project was image-loading problems.
         As I investigated, I started exploring Cumulative Layout Shift (CLS), image formats, and performance load
         introuced by third-party scripts.
       </p>
       <p class="caseStudy-p">I used Google Lighthouse and Chrome DevTools to investigate the site's performance
-        and identify the areeas that neeeded attention. What started as an image issue become a full-blown deep dive
+        and identify the areas that neeeded attention. What started as an image issue become a full-blown deep dive
         to understanding how several implementation decisions can affect the experience of loading and using a page.
       </p>
       <figure>
@@ -300,27 +299,21 @@
         window.
         I researched the CLS, responsive images, and image optimization using MDN, Stack Overflow, and other technical
         resources.
-        The search results did give me but useful starting points, but I'v learned not to summe the first was
+        The search results did give me but useful starting points, but I'v learned not to assume the first was
         necesarrily current or
-        appropiate for my project. That research informed several changes.
+        appropriate for my project. That research informed several changes.
       </p>
       <h3 class="caseStudy-h3">Optimizing images</h3>
       <p class="caseStudy-p">I converted the site's images to AVIF with JPEG fallbacks and added explicit image
         dimensions so the browser could reserve space before the images loaded.
       </p>
       <h3 class="caseStudy-h3">Adjusting third-party scripts </h3>
-      <p class="caseStudy-p">I changed how Calendly's and Font Awesome's scripts were loaded, inclduing using async
+      <p class="caseStudy-p">I changed how Calendly's and Font Awesome's scripts were loaded, including using async
         loading and moving the script towards the end of the document to reduce interfence with the initial page render.
       </p>
       <h3 class="caseStudy-h3">Testing the changes</h3>
       <p class="caseStudy-p">I reran Lighthouse multiple times in incognito sessions to compare performance and account
         for variation between runs. Lighthouse FAQ advised repeated testing to get a true user experience.
-      </p>
-      <p class="caseStudy-p">I also continued refining the visual design. By version 4.0, I used Claude to help explore
-        color
-        palettes, typography, and layout options. I have it Bria's preferences as constraints: warmer, richer, more
-        vibrant colors
-        rather than the muted palette she wanted to avoid.
       </p>
       <figure>
         <img src="./images/yogaWithBriii_screenshot.avif"
@@ -335,7 +328,8 @@
       <p class="caseStudy-p">On October 27, I ran 10 Lighthouse tests on Bria's website in Chrome's Incognito mode using
         the default Navigation setting, Mobile, and Performance only. The median Performance score was 75.5 out of 100,
         with individual runs ranging from 60 to 92. Not too shabby for a photo-heavy site with third-party scripts
-        running under Lighthouse's mobile network/CPU throttling. It's not in the consisent 90s yet, but the testing also showed me there is
+        running under Lighthouse's mobile network/CPU throttling. It's not in the consisent 90s yet, but the testing
+        also showed me there is
         still room to improve. </p>
       <p class="caseStudy-p">The site is currently live on Netlify, but it doesn't have
         enough real-world data for me to make claims about business impact.
@@ -348,12 +342,6 @@
         <img src="./images/yogaWithBriii_screenshot.avif" alt=">Screenshot of Lighthouse score AFTER optimization">
         <figcaption>>Screenshot of Lighthouse score AFTER optimization</figcaption>
       </figure>
-      <!-- OR -->
-      <!-- <ul>
-        <li>Outcome or improvement #1</li>
-        <li>Outcome or improvement #2</li>
-        <li>Outcome or improvement #3</li>
-      </ul>-->
     </section>
 
     <!-- Accessibility -->
@@ -372,7 +360,7 @@
           different viewport sizes.
         </li>
         <li>One specific issue involved the gold text, which needed better color contrast. I deepend the color after
-          WAVE flagged the promblem.
+          WAVE flagged the problem.
         </li>
       </ul>
     </section>
@@ -382,7 +370,7 @@
       <h2 class="caseStudy-h2">9. Current Status</h2>
       <p class="caseStudy-p">
         The site is currently live on Netlify, Bria hasn't yet purchased a domain nor begun actively
-        active directing traffic to the site. To date, I don't yet have meaningful analytics or user feedback to
+         directing traffic to the site. To date, I don't yet have meaningful analytics or user feedback to
         evaluate its real-world impact.
       </p>
     </section>
@@ -392,9 +380,9 @@
       <h2 class="caseStudy-h2">10. Lesson Learned</h2>
       <ul>
         <li><span>Technical</span>: Images and third-party scripts can greatly affect performance and
-          layout stability, even on a seemly simple site.Learning that relationship helped me move beyond treating
-          each visible promblem as an isolated issue.</li>
-        <li><span>Engineering/Debugging</span>: Diagnostic tools gives me a starting point for investigating promblems
+          layout stability, even on a simple site.Learning that relationship helped me move beyond treating
+          each visible problem as an isolated issue.</li>
+        <li><span>Engineering/Debugging</span>: Diagnostic tools gives me a starting point for investigating problems
           instead
           of changing things blindly. I learned to use its findings to guide further research and testing.</li>
         <li><span>Dev Growth</span>: I learned that debugging depends heavily on how well I frame the
