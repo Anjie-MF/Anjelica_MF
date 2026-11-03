@@ -156,7 +156,7 @@
         <dd>JavaScript, HTML5, CSS3</dd>
       </dl>
       <!-- add link icon; css is buttonlike -->
-      <a class="project-link" href="https://yogawithbriii.netlify.app/" target="_blank" rel="noopener noreferrer"
+      <a class="project-link" href="https://yogawithbriii.com/" target="_blank" rel="noopener noreferrer"
         aria-label="View live demo of Yoga with Briii">Live Site</a>
       <!-- add GH icon; css is buttonlike -->
       <a class="project-link" href="https://github.com/Anjie-MF/Yoga_with_Briii" target="_blank"
@@ -291,17 +291,12 @@
     <!-- Solution -->
     <section id="solution">
       <h2 class="caseStudy-h2">6. The Solution </h2>
-      <p class="caseStudy-p"> I started with the evidence from Lighthouse rather than tossing my computer out the
-        window.
-        I researched the CLS, responsive images, and image optimization using MDN, Stack Overflow, and other technical
-        resources.
-        The search results did give me but useful starting points, but I'v learned not to assume the first was
-        necesarrily current or
-        appropriate for my project. That research informed several changes.
-      </p>
-      <h3 class="caseStudy-h3">Optimizing images</h3>
-      <p class="caseStudy-p">I converted the site's images to AVIF with JPEG fallbacks and added explicit image
-        dimensions so the browser could reserve space before the images loaded.
+      <h3 class="caseStudy-h3">Format is not Size</h3>
+      <p class="caseStudy-p">AVIF alone just changed the source type. The fix was exporting the actual resized files,
+        hero and package images at real widths, and the writing srcset and sizes correctly for the displayed size, bio
+        at
+        x/y, cards at x/x, hero at full width, with lazy below the fold and width/height set by ratio so the space was
+        reserved.
       </p>
       <h3 class="caseStudy-h3">Adjusting third-party scripts </h3>
       <p class="caseStudy-p">I changed how Calendly's and Font Awesome's scripts were loaded, including using async
