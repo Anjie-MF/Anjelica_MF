@@ -143,8 +143,8 @@
       <div class="thesis-container">
         <span class="CSeyebrow">Case Study</span>
         <h1 class="caseStudy-h1">Yoga with Briii</h1>
-        <p class="thesis">A real client marketing website for a mobile yoga instructor, where I
-          made photo-heavy pages load faster with AVIF images and LCP tuning.</p>
+        <p class="thesis">A real client marketing website for a mobile yoga instructor, where I made a photo-heavy page
+          load faster with properly sized responsive images and by removing third-party weight.</p>
       </div>
       <img src="./images/yogaWithBriii_screenshot.avif" alt="screenshot of Yoga with Briii website">
       <dl>
@@ -257,10 +257,8 @@
       <h2 class="caseStudy-h2">4. Technical Spotlight</h2>
       <p class="caseStudy-p">One of the most headscratching parts of this project was image-loading problems.
         As I investigated, I started exploring Cumulative Layout Shift (CLS), image formats, and performance load
-        introuced by third-party scripts.
-      </p>
-      <p class="caseStudy-p">I used Google Lighthouse and Chrome DevTools to investigate the site's performance
-        and identify the areas that neeeded attention. What started as an image issue become a full-blown deep dive
+        introuced by third-party scripts and improperly sized images. It started as an image issue become a full-blown
+        deep dive
         to understanding how several implementation decisions can affect the experience of loading and using a page.
       </p>
       <figure>
@@ -279,8 +277,6 @@
           correctly across screen sizes required extra debugging.</li>
         <li><span>Third-party scripts</span>: Calendly and Font Awesome integration introduced additional performance
           weight.</li>
-        <li><span>Visual design & accessibility</span>: Finding a palette that reflected Bria's preferences while
-          maintaining sufficient color contrast took time.</li>
       </ul>
       <p class="caseStudy-p">These prombmes required different approaches. Some involved changing the implementation;
         others
@@ -295,55 +291,67 @@
       <p class="caseStudy-p">AVIF alone just changed the source type. The fix was exporting the actual resized files,
         hero and package images at real widths, and the writing srcset and sizes correctly for the displayed size, bio
         at
-        x/y, cards at x/x, hero at full width, with lazy below the fold and width/height set by ratio so the space was
+        200/300, cards at 295/604, hero at full width, with lazy below the fold and width/height set by ratio so the
+        space was
         reserved.
       </p>
-      <h3 class="caseStudy-h3">Adjusting third-party scripts </h3>
-      <p class="caseStudy-p">I changed how Calendly's and Font Awesome's scripts were loaded, including using async
-        loading and moving the script towards the end of the document to reduce interfence with the initial page render.
+      <h3 class="caseStudy-h3">Test the same way every Time</h3>
+      <p class="caseStudy-p">Debugging with Lighthouse I had simple parameters: incognito mode, navigation,
+        mobile, performance only,
+        on the live domain, and 10 runs to get a median that truly reflects a typical run. The retest
+        wasn't
+        about AVIF vs JPEG or any format, it was about measuring each change to see if the needle was being moved
+        in the right
+        direction.
       </p>
-      <h3 class="caseStudy-h3">Testing the changes</h3>
-      <p class="caseStudy-p">I reran Lighthouse multiple times in incognito sessions to compare performance and account
-        for variation between runs. Lighthouse FAQ advised repeated testing to get a true user experience.
+      <h3 class="caseStudy-h3">Remove, not just defer, when the project is Small</h3>
+      <p class="caseStudy-p">The Font Awesome kit is amazing for people who needs the whole library...but I didn't. I
+        only
+        needed 3 icons. I deleted the kit, downloaded the 3 inline SVGs, then tested again with the same 10-run
+        parameters. My median performance score rose from 81.0 to 88.0!
+      </p>
+      <h3 class="caseStudy-h3">The customer is Right</h3>
+      <p class="caseStudy-p">The only exception, despite all my gains, was the Calendly embed. The client really likes
+        the inline embed, so it had to stay. Unfortunately, third-party code and its dependencies are outside of my
+        scope of experience.
       </p>
       <figure>
-        <img src="./images/opimizationImg_thesolution1.avif"
+        <img src="./images/optimizationImg_theSolution1.jpg"
           alt="Screenshot of code snippet showcasing performance optimization">
-        <figcaption>Screenshot of code snippet showcasing performance optimization</figcaption>
+        <figcaption>Code snippet showcasing performance optimization</figcaption>
       </figure>
       <figure>
-        <img src="./images/thirdpartyScripts_thesolution2.avif"
-          alt="Screenshot of code snippet showcasing third-party scripts">
-        <figcaption>Screenshot of code snippet showcasing third-party scripts</figcaption>
+        <img src="./images/3rdPartyScripts_theSolution2.jpg"
+          alt="Screenshot of code snippet svg icons instead of using package kit causing bloat and slow performance">
+        <figcaption>Code snippet showcasing SVG icons instead of using package kit</figcaption>
       </figure>
     </section>
 
     <!-- Result -->
     <section id="result">
       <h2 class="caseStudy-h2">7.The Result </h2>
-      <p class="caseStudy-p">On October 27, I ran 10 Lighthouse tests on Bria's website in Chrome's Incognito mode using
-        the default Navigation setting, Mobile, and Performance only. The median Performance score was 75.5 out of 100,
-        with individual runs ranging from 60 to 92. Not too shabby for a photo-heavy site with third-party scripts
-        running under Lighthouse's mobile network/CPU throttling. It's not in the consisent 90s yet, but the testing
-        also showed me there is
-        still room to improve. </p>
-      <p class="caseStudy-p">The site is currently live on Netlify, but it doesn't have
+      <p class="caseStudy-p">On November 1, I ran 10 Lighthouse tests on Bria's website in Chrome Incognito mode using
+        the
+        default Navigation setting, Mobile, and perfromance only on yogawithbriii.com. The median performance score was
+        88.0
+        out 100, with a mean of 87.3 and individual runs ranging from 71 to 98. FIve of teh 10 runs scored at or above
+        90. Not too
+        shanny for a photo-heavy site with third party scripts running under Lighthouse's mobile network/CPU throttling.
+        It's not consistently
+        in the 90s yet, but the testing also showed me there is still room to improve </p>
+      <p class="caseStudy-p">The site is currently live, but it doesn't have
         enough real-world data for me to make claims about business impact.
       </p>
       <figure>
-        <!-- <img src="" alt=">Screenshot of Lighthouse score BEFORE optimization"> -->
-        <figcaption>Screenshot of Lighthouse score BEFORE optimization</figcaption>
-      </figure>
-      <figure>
-        <!-- <img src="" alt=">Screenshot of Lighthouse score AFTER optimization"> -->
-        <figcaption>>Screenshot of Lighthouse score AFTER optimization</figcaption>
+        <img src="./images/ResultScreenshot.jpg" alt="A 96 perfromance run from the Nov 1 post-Font Awesome batch">
+        <figcaption>A 96 perfromance run from the Nov 1 post-Font Awesome batch. The batch median was 88.0</figcaption>
       </figure>
     </section>
 
     <!-- Accessibility -->
     <section id="accessibility">
       <h2 class="caseStudy-h2">8. Accessibility</h2>
-      <h3>Tools Used</h3>
+      <h3 class="caseStudy-h3">Tools Used</h3>
       <ul>
         <li>WAVE</li>
         <li>Lighthouse</li>
@@ -352,38 +360,58 @@
       </ul>
       <h3>Key improvements made</h3>
       <ul>
-        <li>I used WAVE and Lighthouse to identify issues, and I used Responsive Testing Tool to check the site across
-          different viewport sizes.
-        </li>
-        <li>One specific issue involved the gold text, which needed better color contrast. I deepend the color after
-          WAVE flagged the problem.
-        </li>
+        <li>Added accessible text for the three inline SVG social icons. A WAVE run on yogawithbriii.com on November 3
+          went from 3 missing alternative text errors to 0 errors after that fix.</li>
+        <li>Deepened the gold text after WAVE flagged its contrast.</li>
+        <li>Added aria-labels to the social links and a visible focus outline for those links, and used Responsive Test
+          Tool to check the site across different viewport sizes.</li>
       </ul>
+      <p class="caseStudy-p">Two contrast errors remain in that November 3 WAVE run, both for hero text over the photo
+        and gradient overlay. WAVE cannot evaluate contrast through transparency and gradients, so it flags the white
+        text on transparent background even though the text sits on the darkest part of the gradient. A solid background
+        behind just the text would clear those flags, and that remains an open next step, not a change I made to
+        preserve the hero design Bria likes.</p>
+      <figure>
+        <img src="./images/WAVE11326Update.jpg" alt="Screenshot of latest WAVE result which was 9.4 out of 10">
+        <figcaption>Screenshot of latest WAVE result which was 9.4 out of 10</figcaption>
+      </figure>
     </section>
 
     <!-- Current Status -->
     <section id="current">
       <h2 class="caseStudy-h2">9. Current Status</h2>
       <p class="caseStudy-p">
-        The site is currently live on Netlify, Bria hasn't yet purchased a domain nor begun actively
-        directing traffic to the site. To date, I don't yet have meaningful analytics or user feedback to
+        The site is currently live on Netlify. To date, I don't yet have meaningful analytics or user feedback to
         evaluate its real-world impact.
       </p>
     </section>
 
     <!-- Lessons Learned -->
     <section id="lessons">
-      <h2 class="caseStudy-h2">10. Lesson Learned</h2>
+      <h2 class="caseStudy-h2">10. Lessons Learned</h2>
       <ul>
         <li><span>Technical</span>: Images and third-party scripts can greatly affect performance and
-          layout stability, even on a simple site.Learning that relationship helped me move beyond treating
+          layout stability, even on a simple site. Learning that relationship helped me move beyond treating
           each visible problem as an isolated issue.</li>
-        <li><span>Engineering/Debugging</span>: Diagnostic tools gives me a starting point for investigating problems
+        <li><span>Engineering/Debugging</span>: Diagnostic tools give me a starting point for investigating problems
           instead
           of changing things blindly. I learned to use its findings to guide further research and testing.</li>
         <li><span>Dev Growth</span>: I learned that debugging depends heavily on how well I frame the
-          question. Better search terms and more specific technical questions led me to toward better documentation
+          question. Better search terms and more specific technical questions led me toward better documentation
           and solutions. </li>
+        <li><span>Deployment</span>:It is funny. Skillcrush taught me about GitHub Pages. Frontend Mentor taught me
+          about sites like Vercel and Netlify, but this project was really live. Despite all those projects I had done,
+          I still wasn't really on the web, at best I was renting space. It wasn't until the client brought her domain
+          and I connected it to Netlify that I felt like a real estate agent handing the client the keys to their new
+          home that I built.</li>
+        </li>
+        <li><span>Client Relationship</span>: Currently, I work freelance, so this experience taught me what it is like
+          dealing with a client delaying copy and images, how to pivot, and how to ask clearly for my rate. I also
+          learned that I am not just building a website. There is a psychological element in this field, because I am
+          also dealing
+          with the client's worries, fears, and anxieties. I found myself having to encourage and guide her, even though
+          I was scared and unsure myself. I knew I couldn't be like that with the client. I had to be brave for them. In
+          addition, I struggled with giving the client what they want while also making sure I am accessible.</li>
       </ul>
     </section>
     <!-- What I'd do next -->
@@ -392,12 +420,13 @@
       <p class="caseStudy-p">First, I'd like to incorporate authentic photographs from her yoga sessions, with
         appropriate consent and permissions in place. I would also revisit testimonials if we can establish the
         necessary permissions to use them.</p>
-      <p class="caseStudy-p">Second, once the domain is established and visitors begin using the site, I'd want to
+      <p class="caseStudy-p">Second,I'd want to
         evaluate how people interact with the contact form and Calendly. That would help us identify opportunities to
         improve the experience based on actual usage rather than assumptions.</p>
-      <p class="caseStudy-p">Finally, I'd like to deepen my understanding of SEO and structured data. I incorporated
-        structured data into this project, and I'd like to learn more about how to use it effectively alongside other
-        SEO practices.</p>
+      <p class="caseStudy-p">Finally, I'd like to build a baseline understanding of SEO before exploring AI SEO. The
+        client has also asked about analytics, so adding analytics tracking is another skill I want to add to my
+        toolkit, so future decisions can be based on real usage, not assumptions.
+      </p>
       <p class="caseStudy-p">This project gave me an opportunity to work with a real client, make decisions within
         practical constraints, and investigate technical problems that weren't solved by simply writing more code. There
         is still room to improve the website as the business grows, but I now have a clearer understanding of how the
